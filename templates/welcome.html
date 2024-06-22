@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSYMM-FOREST-FIRE-SIMULATION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>SSYMM-FOREST-FIRE-SIMULATION</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <button class="control-button" onclick="window.location.href='/index'">Commencer la Simulation</button>
+            <div class="info-box">
+                <h2><i class="fas fa-info-circle" style="color: #17a2b8;"></i> Explication de l'application</h2>
+                <p>
+                    Nous allons implémenter un automate cellulaire qui modélise la propagation d'un feu de forêt.
+                </p>
+            </div>
+            <div class="info-box">
+                <h3><i class="fas fa-fire" style="color: #dc3545;"></i> 1 - Règles de propagation</h3>
+                <p>
+                    Nous modélisons la forêt par une grille de n lignes et m colonnes. Chaque cellule de cette grille peut être:
+                </p>
+                <ul>
+                    <li>vide</li>
+                    <li>un arbre en bonne santé</li>
+                    <li>un arbre en feu</li>
+                    <li>un arbre brûlé</li>
+                </ul>
+                <p>
+                    Initialement, chaque cellule de cette grille contient un arbre en bonne santé avec une certaine probabilité et est vide avec une autre probabilité. Aléatoirement, nous mettons le feu à l'un de ces arbres. D'un instant à un autre, le feu se propage selon ces règles :
+                </p>
+                <ul>
+                    <li>une cellule vide reste vide</li>
+                    <li>un arbre en bonne santé avec au moins un arbre en feu dans son voisinage prend feu (nous utilisons le voisinage de Von Neumann, c'est-à-dire les cellules adjacentes au nord, au sud, à l'ouest et à l'est de la cellule actuelle)</li>
+                    <li>un arbre en bonne santé sans arbre en feu dans son voisinage reste en bonne santé</li>
+                    <li>un arbre en feu devient un arbre brûlé</li>
+                    <li>un arbre brûlé reste brûlé</li>
+                </ul>
+                <p>
+                    Voici un exemple de forêt, où un arbre en bonne santé est représenté par une cellule verte, un arbre en feu par une cellule rouge, un arbre brûlé par une cellule grise et les cellules vides en blanc :
+                </p>
+            </div>
+            <div class="info-box">
+                <h3><i class="fas fa-code" style="color: #28a745;"></i> 2 - Codes Python</h3>
+                <p>
+                    Note importante : dans tout le code, nous respecterons les principes suivants :
+                </p>
+                <ul>
+                    <li>Héritage : les classes enfants héritent des données et des comportements de la classe parent</li>
+                    <li>Encapsulation : contenir les informations dans un objet, en exposant uniquement les informations sélectionnées</li>
+                    <li>Abstraction : exposer uniquement des méthodes publiques de haut niveau pour accéder à un objet</li>
+                    <li>Polymorphisme : plusieurs méthodes peuvent effectuer la même tâche</li>
+                </ul>
+                <p>Bonus :</p>
+                <ul>
+                    <li>Implémentation d'une interface</li>
+                    <li>Implémentation de génériques permettant de définir une spécification d'une classe ou d'une méthode pouvant être utilisée avec n'importe quel type de données</li>
+                    <li>Et une architecture modèle</li>
+                </ul>
+                <p>Vous développerez vos propres fonctionnalités (si nécessaire).</p>
+            </div>
+            <div class="info-box">
+                <h3><i class="fas fa-users" style="color: #007bff;"></i> Membres de l'équipe</h3>
+                <ul>
+                    <li><i class="fas fa-cogs" style="color: #6c757d;"></i> Yann : DevOPS</li>
+                    <li><i class="fas fa-archway" style="color: #17a2b8;"></i> Sif : Architecte de Dev</li>
+                    <li><i class="fas fa-chart-line" style="color: #28a745;"></i> Malek : Analyste de données / Dev</li>
+                    <li><i class="fas fa-flask" style="color: #ffc107;"></i> Dhrifa : Scientifique des Données</li>
+                    <li><i class="fas fa-tasks" style="color: #007bff;"></i> Marianne : Responsable de Produit</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>SSYMM &copy; 2024</p>
+    </footer>
+</body>
+</html>

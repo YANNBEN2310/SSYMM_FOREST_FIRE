@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(to right, red, yellow);
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: padding-left 0.3s ease, background-image 0.3s ease;
+    background-size: cover; /* Change this line */
+    background-repeat: no-repeat; /* Add this line */
+    padding: 0; /* Add this line */
+    border: 0; /* Add this line */
+    height: 100%; /* Add this line */
+  }
+  
+  nav h1 {
+    margin: 0;
+    text-align: center;
+    transition: none;
+    padding: 0; /* Add this line */
+    margin: 0; /* Add this line */
+  }
+  
+  nav:hover {
+    padding-right: 80%;
+    background-image: url('https://i.gifer.com/TyhM.gif');
+    background-position: center; /* Add this line */
+  }
+  
+  nav:hover h1 {
+    text-align: left;
+  }
+  
+  
+  
+  
+#controls {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.control-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.25rem 0.5rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
+}
+
+input[type="number"] {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+.input-icon {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+#forest {
+    display: grid;
+    gap: 1px;
+    justify-content: center;
+    margin: 2rem auto;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.empty {
+    background-color: white;
+}
+
+.healthy {
+    background-color: green;
+}
+
+.burning {
+    background-color: red;
+}
+
+.burnt {
+    background-color: yellow;
+}
+
+footer {
+    background-image: url('https://as1.ftcdn.net/v2/jpg/03/48/33/06/1000_F_348330635_44JxEBINfArGS3tVJm9KLNze2ZGefxzZ.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+.statistics {
+    position: fixed;
+    bottom: 6rem; /* Move up from 3rem to 6rem */
+    right: 1rem;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.statistics p {
+    font-weight: bold;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

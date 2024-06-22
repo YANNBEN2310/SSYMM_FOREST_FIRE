@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forest Fire Simulation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Forest Fire Simulation</h1>
+        </nav>
+    </header>
+
+    <main>
+        <div id="controls">
+            <button id="play" class="control-button">Play</button>
+            <button id="pause" class="control-button">Pause</button>
+            <button id="reset" class="control-button">Reset</button>
+            <div class="tooltip">
+                <input type="number" id="rows" placeholder="Rows" value="20">
+                <i class="fas fa-arrows-alt-v input-icon"></i>
+                <span class="tooltiptext">Number of rows</span>
+            </div>
+            <div class="tooltip">
+                <input type="number" id="cols" placeholder="Cols" value="20">
+                <i class="fas fa-arrows-alt-h input-icon"></i>
+                <span class="tooltiptext">Number of columns</span>
+            </div>
+            <div class="tooltip">
+                <input type="number" id="prob" placeholder="Prob Tree" step="0.01" value="0.7">
+                <i class="fas fa-tree input-icon"></i>
+                <span class="tooltiptext">Probability of tree</span>
+            </div>
+            <div class="tooltip">
+                <input type="number" id="prob_empty" placeholder="Prob Empty" step="0.01" value="0.3">
+                <i class="fas fa-times-circle input-icon"></i>
+                <span class="tooltiptext">Probability of empty space</span>
+            </div>
+            <button id="initialize" class="control-button">Initialize</button>
+        </div>
+        <div id="forest"></div>
+        <div id="statistics" class="statistics"></div>
+    </main>
+
+    <footer>
+        <p>SSYMM &copy; 2024</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
